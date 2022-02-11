@@ -1,0 +1,35 @@
+Name: travel-api
+Host: 0.0.0.0
+Port: 1003
+Mode: dev
+
+#监控
+Prometheus:
+  Host: 0.0.0.0
+  Port: 9091
+  Path: /metrics
+
+#链路追踪
+Telemetry:
+  Name: travel-api
+  Endpoint: http://192.168.1.181:14268/api/traces
+  Sampler: 1.0
+  Batcher: jaeger
+
+Log:
+  ServiceName: travel-api
+  Level: error
+
+DB:
+  DataSource: root:PXDN93VRKUm8TeE7@tcp(192.168.1.181:33069)/looklook_travel?charset=utf8mb4&parseTime=true&loc=Asia%2FShanghai
+Cache:
+  - Host: 192.168.1.181:63799
+    Pass: G62m50oigInC30sf
+
+#rpc
+UsercenterRpcConf:
+  Target: k8s://go-zero-looklook/usercenter-rpc:1102
+
+TravelRpcConf:
+  Target: k8s://go-zero-looklook/travel-rpc:1103
+

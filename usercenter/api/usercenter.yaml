@@ -1,0 +1,38 @@
+Name: usercenter-api
+Host: 0.0.0.0
+Port: 1002
+Mode: dev
+
+#监控
+Prometheus:
+  Host: 0.0.0.0
+  Port: 9091
+  Path: /metrics
+
+#链路追踪
+Telemetry:
+  Name: usercenter-api
+  Endpoint: http://192.168.1.181:14268/api/traces
+  Sampler: 1.0
+  Batcher: jaeger
+
+Log:
+  ServiceName: usercenter-api
+  Level: error
+
+#jwtAuth
+JwtAuth:
+  AccessSecret: ae0536f9-6450-4606-8e13-5a19ed505ea0
+
+#WxMiniConf
+WxMiniConf:
+  AppId: wx2add729fadddddd
+  Secret: 20365395b3de9b2a9351ddddddd
+
+#rpc service
+UsercenterRpcConf:
+  Target: k8s://go-zero-looklook/usercenter-rpc:1102
+
+IdentityRpcConf:
+  Target: k8s://go-zero-looklook/identity-rpc:1101
+

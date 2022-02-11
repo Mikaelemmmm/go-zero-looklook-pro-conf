@@ -1,0 +1,29 @@
+Name: order-api
+Host: 0.0.0.0
+Port: 1004
+Mode: dev
+
+#监控
+Prometheus:
+  Host: 0.0.0.0
+  Port: 9091
+  Path: /metrics
+
+#链路追踪
+Telemetry:
+  Name: order-api
+  Endpoint: http://192.168.1.181:14268/api/traces
+  Sampler: 1.0
+  Batcher: jaeger
+
+#rpc
+OrderRpcConf:
+  Target: k8s://go-zero-looklook/order-rpc:1104
+
+PaymentRpcConf:
+  Target: k8s://go-zero-looklook/payment-rpc:1105
+
+Log:
+  ServiceName: order-api
+  Level: error
+
