@@ -32,4 +32,4 @@ Cache:
 
 #rpc service
 IdentityRpcConf:
-  Target: k8s://go-zero-looklook/identity-rpc:1101
+  Target: k8s://go-zero-looklook/identity-rpc-svc:1101 #goctl kube 默认生成的k8s yaml的serviceName: {rpc中定义的name}-svc
