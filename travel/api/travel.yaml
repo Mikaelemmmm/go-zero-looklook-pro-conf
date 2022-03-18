@@ -28,8 +28,8 @@ Cache:
 
 #rpc
 UsercenterRpcConf:
-  Target: k8s://go-zero-looklook/usercenter-rpc:1102
+  Target: k8s://go-zero-looklook/usercenter-rpc-svc:1102 #goctl kube 默认生成的k8s yaml的serviceName: {rpc中定义的name}-svc
 
 TravelRpcConf:
-  Target: k8s://go-zero-looklook/travel-rpc:1103
+  Target: k8s://go-zero-looklook/travel-rpc-svc:1103 #goctl kube 默认生成的k8s yaml的serviceName: {rpc中定义的name}-svc
 
