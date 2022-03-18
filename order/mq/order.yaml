@@ -38,10 +38,10 @@ PaymentUpdateStatusConf:
 
 #rpc
 OrderRpcConf:
-  Target: k8s://go-zero-looklook/order-rpc:1104
+  Target: k8s://go-zero-looklook/order-rpc-svc:1104 #goctl kube 默认生成的k8s yaml的serviceName: {rpc中定义的name}-svc
 
 MqueueRpcConf:
-  Target: k8s://go-zero-looklook/mqueue-rpc:1106
+  Target: k8s://go-zero-looklook/mqueue-rpc-svc:1106 #goctl kube 默认生成的k8s yaml的serviceName: {rpc中定义的name}-svc
 
 UsercenterRpcConf:
-  Target: k8s://go-zero-looklook/usercenter-rpc:1102
+  Target: k8s://go-zero-looklook/usercenter-rpc-svc:1102 #goctl kube 默认生成的k8s yaml的serviceName: {rpc中定义的name}-svc
