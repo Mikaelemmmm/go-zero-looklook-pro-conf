@@ -18,10 +18,10 @@ Telemetry:
 
 #rpc
 OrderRpcConf:
-  Target: k8s://go-zero-looklook/order-rpc:1104
+  Target: k8s://go-zero-looklook/order-rpc-svc:1104 #goctl kube 默认生成的k8s yaml的serviceName: {rpc中定义的name}-svc
 
 PaymentRpcConf:
-  Target: k8s://go-zero-looklook/payment-rpc:1105
+  Target: k8s://go-zero-looklook/payment-rpc-svc:1105 #goctl kube 默认生成的k8s yaml的serviceName: {rpc中定义的name}-svc
 
 Log:
   ServiceName: order-api
