@@ -22,5 +22,5 @@ Log:
 DB:
   DataSource: root:PXDN93VRKUm8TeE7@tcp(192.168.1.181:33069)/looklook_travel?charset=utf8mb4&parseTime=true&loc=Asia%2FShanghai
 Cache:
-  - Host: 192.168.1.181:63799
+  - Host: 192.168.1.181:36379
     Pass: G62m50oigInC30sf
