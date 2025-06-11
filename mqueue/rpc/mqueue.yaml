@@ -20,7 +20,7 @@ Log:
   Level: error
 
 Redis:
-  Host: 192.168.1.181:63799
+  Host: 192.168.1.181:36379
   Type: node
   Pass: G62m50oigInC30sf
 
